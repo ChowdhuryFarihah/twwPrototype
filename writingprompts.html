@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" type="text/html">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Writing Prompts</title>
+  <script type="text/javascript" src="script.js"></script>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>-->
+<script src="https://kit.fontawesome.com/5d68d11bba.js" crossorigin="anonymous"></script>
+<script>
+	function goThroughWritingPromptsRight() {
+	
+		//const promptsLink = [];
+		const dateList = ["July 27th, 2022", "July 28th, 2022", "July 29th, 2022", "August 1st, 2022", "August 2nd, 2022", "August 3rd, 2022", "August 4th, 2022", "August 5th, 2022", "August 9th, 2022", "August 10th, 2022", "August 11th, 2022", "August 12th, 2022", "August 15th, 2022", "August 16th, 2022", "August 17th, 2022", "August 18th, 2022", "August 19th, 2022", "August 22th, 2022", "August 23th, 2022", "August 24th, 2022", "August 25th, 2022", "August 26th, 2022", "August 29th, 2022", "August 30th, 2022", "August 31th, 2022", "September 1st, 2022", "September 2nd, 2022", "September 5th, 2022", "September 6th, 2022", "September 7th,2022", "september 8th, 2022"];
+		
+		//create a variable that will keep track of which prompt the page is currently showing"
+		let promptTracker = document.getElementById("prompt");
+		let promptNumber = promptTracker.src[51];
+		console.log(promptTracker.src.length)
+		/*if (promptTracker.src.length > 56){
+			
+			promptNumber = promptTracker.src[51] + promptTracker.src[52];	
+		}*/
+		let date = document.getElementById("date");
+		console.log(promptNumber);
+		console.log(promptTracker.src);
+		/*if ((parseInt(promptNumber)) > -1 && (parseInt(promptNumber)) < 30) {
+			promptTracker.src = "file:///C:/Users/User/Downloads/twwPrototype/prompt" + String(parseInt(promptNumber)+1) + ".png";
+			promptTracker.alt = "prompt" + String(parseInt(promptNumber)+1);
+			//change the date 
+			date.innerHTML = dateList[parseInt(promptNumber)];
+			console.log(date);
+			console.log(dateList[parseInt(promptNumber)]);
+		}
+		else
+		{
+			promptTracker = promptTracker;
+			date = date;
+		}*/
+	}
+	
+	//button to go left (decreasing order)
+	function goThroughWritingPromptsLeft() {
+		//const promptsLink = [];
+		const dateList = ["July 27th, 2022", "July 28th, 2022", "July 29th, 2022", "August 1st, 2022", "August 2nd, 2022", "August 3rd, 2022", "August 4th, 2022", "August 5th, 2022", "August 9th, 2022", "August 10th, 2022", "August 11th, 2022", "August 12th, 2022", "August 15th, 2022", "August 16th, 2022", "August 17th, 2022", "August 18th, 2022", "August 19th, 2022", "August 22th, 2022", "August 23th, 2022", "August 24th, 2022", "August 25th, 2022", "August 26th, 2022", "August 29th, 2022", "August 30th, 2022", "August 31th, 2022", "September 1st, 2022", "September 2nd, 2022", "September 5th, 2022", "September 6th, 2022", "September 7th, 2022", "September 8th, 2022"];
+
+		//create a variable that will keep track of which prompt the page is currently showing"
+		let promptTracker = document.getElementById("prompt");
+		let promptNumber = promptTracker.src[51];
+		let date = document.getElementById("date");
+		let promptNumberInt = parseInt(promptNumber);
+		console.log(promptNumber);
+		console.log(promptTracker);
+		if (promptTracker.src.length > 56){
+			
+			promptNumber = promptTracker.src[51] + promptTracker.src[52];	
+		}
+		if (parseInt(promptNumber) < 31 && parseInt(promptNumber) > 1) {
+			promptTracker.src = "file:///C:/Users/User/Downloads/twwPrototype/prompt" + String(parseInt(promptNumber)-1) + ".png";
+			promptTracker.alt = "prompt" + String(parseInt(promptNumber)-1);
+			date.innerHTML = dateList[parseInt(promptNumber)-2];
+			console.log(date);
+		}
+		else
+		{
+			promptTracker = promptTracker;
+			date = date;
+		}
+	}
+	
+</script>
+</head>
+
+<body>
+  <script src="script.js"></script>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid"style="background-color:#88A8F6">
+    <a class="navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="twwPrototype.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="writingprompts.html">Writing Prompts</a>
+        </li>
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dictionary
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="vocabulary.html">Word of The Day</a></li>
+          </ul>
+        </li> <li class="nav-item">
+          <a class="nav-link" href="programs.html">Programs</a>
+        </li>
+		 <li class="nav-item">
+          <a class="nav-link" href="grammar.html">Grammar Lessons</a>
+        </li>
+		 <li class="nav-item">
+          <a class="nav-link" href="about.html">About US</a>
+        </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <!--<div class="d-flex justify-content-around" class="d-flex align-items-stretch" class="images-margin"><div><img src="Images/avantgarde.jpeg" height="500px" id="avant-garde"></div><div><img src="Images/elan.jpeg" height="500px" id="elan"></div><div><img src="Images/avantgarde.jpeg" height="500px" id="avant-garde"></div><div><img src="Images/avantgarde.jpeg" height="500px" id="avant-garde"></div>  </div>  -->
+<h1>Writing Prompts</h1>
+</br></br>
+<div class="wp-container">
+	<div class="wp-item">
+	<h6>Date:</h6><p id="date">September 7th, 2022</p>
+	</div>
+	<div class="wp-item">
+	<img src="prompt30.png" id="prompt" alt="prompt30" height="300px">
+	</div>
+	</br>
+	<div class="wp-item">
+	<button onclick="goThroughWritingPromptsLeft()"><i class="fa-sharp fa-solid fa-play fa-rotate-180"></i></button>
+	<button onclick="goThroughWritingPromptsRight()"><i class="fa-sharp fa-solid fa-play"></i></button>
+	</div>
+</div>
+<div class="container">
+<div>1
+</div>
+<div>2
+</div>
+</div>
+</br>
+<footer>
+  <div class="card text-bg-dark">
+  <img src="banner.png" class="card-img" alt="..." class="banner" height="300px">
+  <div class="card-img-overlay">
+    <h5 class="card-title">Contact Us</h5>
+    <p class="card-text"><ul><li>Email: thewriterswandprogram@gmail.com</li><li>Tiktok: </li><li>Instagram: </li><li>Facebook: </li></ul></p>
+  </div>
+</div>
+</footer>
+</html>
