@@ -41,6 +41,7 @@ function goThroughWritingPromptsRight() {
 		let promptNumberInt = parseInt(promptNumber);
 		console.log(promptNumber);
 		console.log(promptTracker);
+		console.log(promptTracker.src.length);
 		if (promptTracker.src.length > 59){
 			
 			promptNumber = promptTracker.src[54] + promptTracker.src[55];	
