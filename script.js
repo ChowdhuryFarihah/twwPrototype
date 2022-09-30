@@ -5,11 +5,11 @@ function goThroughWritingPromptsRight() {
 		
 		//create a variable that will keep track of which prompt the page is currently showing"
 		let promptTracker = document.getElementById("prompt");
-		let promptNumber = promptTracker.src[54];
+		let promptNumber = promptTracker.src[51];
 		console.log(promptTracker.src.length)
-		if (promptTracker.src.length > 59){
+		if (promptTracker.src.length > 56){
 			
-			promptNumber = promptTracker.src[54] + promptTracker.src[55];	
+			promptNumber = promptTracker.src[51] + promptTracker.src[52];	
 		}
 		let date = document.getElementById("date");
 		console.log(promptNumber);
@@ -36,16 +36,16 @@ function goThroughWritingPromptsRight() {
 
 		//create a variable that will keep track of which prompt the page is currently showing"
 		let promptTracker = document.getElementById("prompt");
-		let promptNumber = promptTracker.src[54];
+		let promptNumber = promptTracker.src[51];
 		let date = document.getElementById("date");
 		let promptNumberInt = parseInt(promptNumber);
 		console.log(promptNumber);
 		console.log(promptTracker);
 		console.log(promptTracker.src);
 		console.log(promptTracker.src.length);
-		if (promptTracker.src.length > 59){
+		if (promptTracker.src.length > 56){
 			
-			promptNumber = promptTracker.src[54] + promptTracker.src[55];	
+			promptNumber = promptTracker.src[51] + promptTracker.src[52];	
 		}
 		if (parseInt(promptNumber) < 31 && parseInt(promptNumber) > 1) {
 			promptTracker.src = "file:///C:/Users/User/Downloads/twwPrototype/prompt" + String(parseInt(promptNumber)-1) + ".png";
